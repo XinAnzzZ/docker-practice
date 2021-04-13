@@ -1,4 +1,4 @@
-FROM openjdk:openjdk:11-jre-slim
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 EXPOSE 9006
 ADD docker-practice.jar app.jar

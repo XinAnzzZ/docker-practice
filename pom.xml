@@ -14,7 +14,7 @@
     <name>docker-practice</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <docker.image.prefix>spring-boot</docker.image.prefix>
     </properties>
     <dependencies>
@@ -43,7 +43,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
                 <configuration>
+                    <!-- docker 镜像的分组和名称 -->
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <!-- 指定 docker file 目录 -->
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
